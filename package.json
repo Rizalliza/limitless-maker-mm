@@ -1,0 +1,22 @@
+{
+  "name": "limitless-maker-mm",
+  "version": "0.8.1",
+  "private": true,
+  "type": "module",
+  "description": "Simulation-first Limitless adaptation of a market-neutral Polymarket maker/merge bot",
+  "scripts": {
+    "start": "node src/index.js",
+    "sim": "DRY_RUN=true node src/index.js",
+    "live": "DRY_RUN=false LIVE_TRADING_ACK=I_UNDERSTAND node src/index.js",
+    "check": "node scripts/check-interfaces.js && node --check src/index.js && node --check src/config.js && node --check src/limitlessClient.js && node --check src/detector.js && node --check src/fillWatcher.js && node --check src/ctf.js && node --check src/quote.js && node --check src/capital.js && node --check src/performanceTracker.js && node --check src/strategy.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@limitless-exchange/sdk": "^1.1.0",
+    "dotenv": "^17.2.1",
+    "ethers": "^6.15.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

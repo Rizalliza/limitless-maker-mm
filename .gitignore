@@ -1,0 +1,26 @@
+node_modules/
+
+# Local secrets and machine-specific env files
+.env
+.env.*
+!.env.example
+!.env.live.example
+
+# Local/editor noise
+.DS_Store
+.vscode/
+.qodo/
+
+# Logs, scratch files, and generated output
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+coverage/
+dist/
+build/
+temp.txt
+
+# Wallet/key material
+keys/
+*keypair*.json
